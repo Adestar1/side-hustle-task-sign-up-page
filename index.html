@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" charset="utf-8">
+      function validateForm() {
+        var password = document.getElementById("pword").value;
+        var confirmPassword = document.getElementById("cpword").value;
+        if (password != confirmPassword) {
+          console.log(error);
+          document.getElementById("errormessage").innerHTML =
+            "Passwords do not match";
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="left-content">
+        <div class="logo-box">
+          <img
+            src="star.png"
+            alt="logo"
+            width="100px"
+            height="100px"
+            style="margin: 10px"
+          />
+          <span>STAR</span>
+        </div>
+        <div class="credit">
+          <p>
+            Photo by <span class="underline">Halie West</span> on
+            <span class="underline">Unsplash</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="top-content">
+          <p>
+            This is not a real online service! you know you need something like
+            this in <br />your life to help you realize your deepest dreams.
+            <br />
+            Sign up <i> now</i> to get started.
+            <br />
+            <br />
+            You <i> know </i>you want to.
+          </p>
+        </div>
+
+        <form class="sign-up-box" onsubmit="return validateForm()">
+          <div class="heading">
+            <p>Let's do this!</p>
+          </div>
+          <div>
+            <label for="fname">Firstname</label>
+            <br />
+            <input type="text" name="fname" id="fname" />
+          </div>
+          <div>
+            <label for="lname">Lastname</label>
+            <br />
+            <input type="text" name="lname" id="lname" />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <br />
+            <input type="email" name="email" id="email" />
+          </div>
+          <div>
+            <label for="pnumber">Phone number</label>
+            <br />
+            <input type="number" name="pnumber" id="pnumber" />
+          </div>
+          <div>
+            <label for="pword">Password</label>
+            <br />
+            <input type="password" name="pword" id="pword" />
+          </div>
+          <div>
+            <label for="cpword">Confirm Password</label>
+            <br />
+            <input type="password" name="cpword" id="cpword" />
+            <span id="errormessage"></span>
+          </div>
+        </form>
+        <input type="submit" class="btn" value="Create Account" />
+
+        <p style="font-weight: 400; padding-left: 30px">
+          Already have an account?
+          <a href="#" style="text-decoration: none; color: hsl(96, 75%, 30%)"
+            >Login here</a
+          >
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
